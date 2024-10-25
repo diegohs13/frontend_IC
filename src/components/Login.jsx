@@ -56,7 +56,7 @@ const Login = ({ setUserData }) => {
                 alt="QR Code Exemplo"
                 className="qr-code"
               />
-              <p>Escaneie o QR Code acima e vote em VeriNews para participar!</p>
+              <p>Escaneie o QR Code acima e vote em Chill Tech para participar!</p>
             </div>
             <button type="submit">Participar</button>
           </form>
