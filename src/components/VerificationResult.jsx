@@ -32,7 +32,7 @@ const VerificationResult = () => {
           Verificar outra notícia
         </button>
         <button className="login-button" onClick={() => navigate('/')}>
-          Voltar para Login
+          Voltar para o inicio
         </button>
       </div>
     </div>
