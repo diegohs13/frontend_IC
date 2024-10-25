@@ -16,53 +16,112 @@
 }
 
 .form-card {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.85);
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .form-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 .form-card h2 {
     color: #785959e8;
-    margin-bottom: 20px;
-    font-size: 22px;
+    margin-bottom: 15px;
+    font-size: 24px;
     font-weight: 600;
+}
+
+.form-card p {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #555;
 }
 
 .form-card input {
     width: calc(100% - 20px);
     max-width: 360px;
     margin: 10px auto;
-    padding: 12px;
+    padding: 14px;
     font-size: 16px;
     border-radius: 30px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #dcdcdc;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-card input:focus {
+    border-color: #785959;
+    box-shadow: 0 0 8px rgba(120, 89, 89, 0.4);
+    outline: none;
+}
+
+.qr-code-container {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    margin: 10px 0;
+}
+
+/* Grupo de botões dentro do formulário */
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
 }
 
 .form-card button {
-    width: calc(100% - 20px);
+    width: 100%;
     max-width: 360px;
     padding: 12px;
-    margin-top: 15px;
     border-radius: 30px;
     border: none;
     background-color: #785959e8;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .form-card button:hover {
     background-color: #654545;
+    transform: scale(1.03);
+}
+
+/* Botão "Não Participar" */
+.cancel-button {
+    width: calc(100% - 20px);
+    max-width: 360px;
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 30px;
+    border: none;
+    background-color: #d3cfcf;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cancel-button:hover {
+    background-color: #b3b3b3;
+    transform: scale(1.03);
+}
+
+.error {
+    color: #d32f2f;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 500;
 }

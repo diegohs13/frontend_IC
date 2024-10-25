@@ -12,12 +12,20 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
+        {/* Rota inicial - Login */}
         <Route path="/" element={<Login setUserData={setUserData} />} />
+
+        {/* Rota de verificação - acessível mesmo sem userData */}
         <Route 
           path="/verificar" 
-          element={userData ? <PredictForm userData={userData} /> : <Navigate to="/" />} 
+          element={<PredictForm userData={userData} />} 
         />
+
+        {/* Rota para resultado da verificação */}
         <Route path="/resultado" element={<VerificationResult />} />
+
+        {/* Redireciona para "/" caso rota não exista */}
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>
   );

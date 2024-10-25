@@ -7,50 +7,68 @@ const Login = ({ setUserData }) => {
   const [nomeCompleto, setNomeCompleto] = useState('');
   const [telefone, setTelefone] = useState('');
   const [erro, setErro] = useState('');
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Hook de navegação
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Impede o comportamento padrão do formulário
     try {
-      // Substitua pela URL pública do ngrok
-      await axios.post('https://4eb6-201-95-151-91.ngrok-free.app/login', {
-        nome_completo: nomeCompleto,
-        telefone: telefone,
+      await axios.post('https://0df5-2804-7f0-be40-b04e-b558-8728-1aa0-7375.ngrok-free.app/login', {
+        nome_completo: nomeCompleto.trim(),
+        telefone: telefone.trim(),
       });
 
-      // Atualiza o estado global com os dados do usuário
       setUserData({ nomeCompleto, telefone });
-
-      // Redireciona para a tela de verificação
-      navigate('/verificar');
+      navigate('/verificar'); // Redireciona para página de verificação
     } catch (error) {
       console.error('Erro na requisição:', error);
-      setErro('Erro ao salvar os dados de login.');
+      setErro('Erro ao salvar os dados de participação.');
     }
+  };
+
+  const handleCancel = () => {
+    navigate('/verificar'); // Redireciona diretamente para página de verificação
   };
 
   return (
     <div className="main-container">
       <div className="form-wrapper">
         <div className="form-card">
-          <h2>Login</h2>
+          <h2>Participe do Sorteio de uma Alexa!</h2>
+          <p>Preencha os campos abaixo para concorrer ao sorteio. Boa sorte!</p>
           <form onSubmit={handleSubmit}>
             <input
               type="text"
               value={nomeCompleto}
               onChange={(e) => setNomeCompleto(e.target.value)}
-              placeholder="Nome Completo"
+              placeholder="Seu Nome Completo"
               required
             />
             <input
               type="tel"
               value={telefone}
               onChange={(e) => setTelefone(e.target.value)}
-              placeholder="Telefone"
+              placeholder="Seu Telefone (com DDD)"
               required
             />
-            <button type="submit">Entrar</button>
+            <div className="qr-code-container">
+              <img
+                src="https://via.placeholder.com/150"
+                alt="QR Code Exemplo"
+                className="qr-code"
+              />
+              <p>Escaneie o QR Code acima e vote em ChillTech para participar!</p>
+            </div>
+            <button type="submit">Participar</button>
           </form>
+
+          <button
+            type="button"
+            className="cancel-button"
+            onClick={handleCancel}
+          >
+            Não Participar
+          </button>
+
           {erro && <p className="error">{erro}</p>}
         </div>
       </div>

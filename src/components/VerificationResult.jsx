@@ -5,7 +5,7 @@ import './VerificationResult.css';
 const VerificationResult = () => {
   const navigate = useNavigate();
   const { state } = useLocation();
-  const { resultado = "Indefinido", confianca = 0 } = state || {};
+  const { resultado = "Indefinido" } = state || {};
 
   return (
     <div className="result-container">

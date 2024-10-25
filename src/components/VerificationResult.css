@@ -12,6 +12,7 @@
     color: #785959e8;
     margin-bottom: 40px;
     font-size: 2rem;
+    letter-spacing: 2px;
 }
 
 h2 {
@@ -31,6 +32,7 @@ h2 {
     font-size: 64px;
     margin-right: 10px;
     animation: pop 0.5s ease-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .icon-true {
@@ -41,7 +43,6 @@ h2 {
     color: red;
 }
 
-/* Animação para ícones */
 @keyframes pop {
     0% {
         transform: scale(0.8);
@@ -52,11 +53,13 @@ h2 {
 }
 
 .explanation {
-    color: #b7b7b7;
+    color: #4a4a4a;
     margin: 20px 0;
     text-align: center;
     max-width: 400px;
     line-height: 1.5;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .buttons-container {
@@ -67,7 +70,6 @@ h2 {
     margin-top: 20px;
 }
 
-/* Botões de ação */
 .new-check-button, .login-button {
     width: 100%;
     padding: 15px;
@@ -76,10 +78,9 @@ h2 {
     border-radius: 8px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
-/* Estilo do botão de verificação */
 .new-check-button {
     background-color: #785959e8;
     color: white;
@@ -89,12 +90,15 @@ h2 {
     background-color: #654545;
 }
 
-/* Estilo do botão de login */
 .login-button {
-    background-color: #d3cfcf;
+    background-color: #b3b3b3;
     color: white;
 }
 
 .login-button:hover {
-    background-color: #b3b3b3;
+    background-color: #8f8f8f;
+}
+
+.new-check-button:active, .login-button:active {
+    transform: scale(0.98);
 }

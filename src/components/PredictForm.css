@@ -1,4 +1,3 @@
-/* Container principal */
 .main-container {
     display: flex;
     flex-direction: column;
@@ -9,19 +8,8 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-.form-wrapper {
-    margin-top: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-
-
-/* Formulário elegante */
 .form-card {
-    background-color: rgba(255, 255, 255, 0.7); /* Transparente e suave */
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -29,15 +17,25 @@
     width: 100%;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 0.5s ease-out;
 }
 
-/* Animação ao passar o mouse */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .form-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Título do formulário */
 .form-card h2 {
     color: #785959e8;
     margin-bottom: 20px;
@@ -45,20 +43,24 @@
     font-weight: 600;
 }
 
-/* Input e botão com o mesmo tamanho */
+.subtitle {
+    color: #757575;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
 .form-card input,
 .form-card button {
-    width: calc(100% - 20px); /* Ajustar para caber dentro do card */
-    max-width: 360px; /* Tamanho máximo consistente */
-    margin: 10px auto; /* Centralizar dentro do card */
+    width: calc(100% - 20px);
+    max-width: 360px;
+    margin: 10px auto;
     padding: 12px;
     font-size: 16px;
-    border-radius: 30px; /* Arredondado */
+    border-radius: 30px;
     border: none;
     transition: all 0.3s;
 }
 
-/* Estilo do input */
 .form-card input {
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -71,13 +73,6 @@
     box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Placeholder do input */
-.form-card input::placeholder {
-    color: #b7b7b7;
-    font-style: italic;
-}
-
-/* Estilo do botão */
 .form-card button {
     background-color: #785959e8;
     color: white;
@@ -90,25 +85,18 @@
     transform: scale(1.05);
 }
 
-/* Mensagem de erro */
-.error {
-    color: red;
-    margin-top: 10px;
-    font-weight: bold;
+.form-card button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
 }
 
-/* Responsividade */
-@media (max-width: 600px) {
-    .form-card {
-        padding: 30px;
-    }
-
-    .form-card h2 {
-        font-size: 20px;
-    }
-
-    .form-card input,
-    .form-card button {
-        font-size: 14px;
-    }
+.error {
+    color: #d32f2f;
+    background-color: #fdecea;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    width: calc(100% - 20px);
+    text-align: center;
 }
