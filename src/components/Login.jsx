@@ -7,10 +7,10 @@ const Login = ({ setUserData }) => {
   const [nomeCompleto, setNomeCompleto] = useState('');
   const [telefone, setTelefone] = useState('');
   const [erro, setErro] = useState('');
-  const navigate = useNavigate(); // Hook de navegação
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Impede o comportamento padrão do formulário
+    e.preventDefault();
     try {
       await axios.post('https://0df5-2804-7f0-be40-b04e-b558-8728-1aa0-7375.ngrok-free.app/login', {
         nome_completo: nomeCompleto.trim(),
@@ -18,7 +18,7 @@ const Login = ({ setUserData }) => {
       });
 
       setUserData({ nomeCompleto, telefone });
-      navigate('/verificar'); // Redireciona para página de verificação
+      navigate('/verificar');
     } catch (error) {
       console.error('Erro na requisição:', error);
       setErro('Erro ao salvar os dados de participação.');
@@ -26,7 +26,7 @@ const Login = ({ setUserData }) => {
   };
 
   const handleCancel = () => {
-    navigate('/verificar'); // Redireciona diretamente para página de verificação
+    navigate('/verificar');
   };
 
   return (
@@ -56,16 +56,12 @@ const Login = ({ setUserData }) => {
                 alt="QR Code Exemplo"
                 className="qr-code"
               />
-              <p>Escaneie o QR Code acima e vote em ChillTech para participar!</p>
+              <p>Escaneie o QR Code acima e vote em VeriNews para participar!</p>
             </div>
             <button type="submit">Participar</button>
           </form>
 
-          <button
-            type="button"
-            className="cancel-button"
-            onClick={handleCancel}
-          >
+          <button type="button" className="cancel-button" onClick={handleCancel}>
             Não Participar
           </button>
 

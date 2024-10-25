@@ -1,88 +1,87 @@
+/* Container principal */
 .result-container {
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #e8e8e8 0%, #f2f2f2 100%);
     font-family: 'Poppins', sans-serif;
+    padding: 20px;
 }
 
+/* Cabeçalho */
 .header h1 {
-    color: #785959e8;
-    margin-bottom: 40px;
-    font-size: 2rem;
+    color: #785959;
+    font-size: 2.8rem;
+    margin-bottom: 30px;
+    text-align: center;
     letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Título */
 h2 {
-    color: #b7b7b7;
-    margin-bottom: 15px;
+    color: #4a4a4a;
     font-size: 1.8rem;
-    font-weight: 500;
+    margin-bottom: 15px;
 }
 
-.icons {
+/* Container do ícone */
+.icon-container {
     display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
 }
 
-.icon-true, .icon-false {
-    font-size: 64px;
-    margin-right: 10px;
-    animation: pop 0.5s ease-out;
+/* Ícones SVG com hover */
+.svg-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.svg-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Texto abaixo dos ícones */
+p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #4a4a4a;
+    text-align: center;
+}
+
+/* Botões */
+.buttons-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out, box-shadow 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.icon-true {
-    color: green;
-}
-
-.icon-false {
-    color: red;
-}
-
-@keyframes pop {
-    0% {
-        transform: scale(0.8);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.explanation {
-    color: #4a4a4a;
-    margin: 20px 0;
-    text-align: center;
-    max-width: 400px;
-    line-height: 1.5;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.buttons-container {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    max-width: 300px;
-    margin-top: 20px;
-}
-
-.new-check-button, .login-button {
-    width: 100%;
-    padding: 15px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s;
-}
-
+/* Botão de verificação */
 .new-check-button {
-    background-color: #785959e8;
+    background-color: #785959;
     color: white;
 }
 
@@ -90,6 +89,7 @@ h2 {
     background-color: #654545;
 }
 
+/* Botão de login */
 .login-button {
     background-color: #b3b3b3;
     color: white;
@@ -99,6 +99,12 @@ h2 {
     background-color: #8f8f8f;
 }
 
-.new-check-button:active, .login-button:active {
+/* Hover nos botões */
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
     transform: scale(0.98);
 }
