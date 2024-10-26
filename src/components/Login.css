@@ -97,3 +97,24 @@
     font-size: 14px;
     font-weight: 500;
 }
+
+.qr-code-container {
+    display: flex;
+    flex-direction: column; /* Empilha verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    margin: 20px 0;
+  }
+  
+  .qr-code {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px; /* Espaço entre o QR Code e o texto */
+  }
+  
+  .qr-code-text {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+  }
+  

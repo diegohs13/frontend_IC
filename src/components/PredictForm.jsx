@@ -15,7 +15,7 @@ const PredictForm = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        'https://e413-2804-7f0-be40-b04e-b558-8728-1aa0-7375.ngrok-free.app/predict',
+        'https://f706-2804-18-1053-4fe8-dd1a-627a-1dd0-3631.ngrok-free.app/predict',
         { texto }
       );
       navigate('/resultado', { state: response.data });
