@@ -108,7 +108,7 @@ const Noticias = ({ onCopiarTexto }) => {
 
   return (
     <div className="noticias-container">
-      <h2>Notícias Disponíveis</h2>
+      <h2>Notícias</h2>
       <div className="noticias-cards">
         {noticias.map((noticia) => (
           <div key={noticia.id} className="card">
