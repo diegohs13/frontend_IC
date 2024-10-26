@@ -12,6 +12,13 @@ const PredictForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErro(''); // Limpa qualquer erro anterior
+
+    if (texto.length < 150) {
+      setErro('A notícia precisa ter pelo menos 150 caracteres.');
+      return; // Impede o envio da requisição
+    }
+
     setLoading(true);
     try {
       const response = await axios.post(
@@ -26,7 +33,6 @@ const PredictForm = () => {
     }
   };
 
-  // Função para receber texto copiado do componente Noticias
   const handleCopiarTexto = (noticia) => {
     setTexto(noticia); // Preenche o campo de entrada com a notícia copiada
   };

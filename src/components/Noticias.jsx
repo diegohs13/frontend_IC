@@ -32,8 +32,7 @@ O Ministério da Saúde anunciou nesta segunda-feira um aumento de 25% na cobert
   {
     id: 5,
     titulo: 'Vacinas de COVID-19 possuem microchips para rastrear pessoas.',
-    texto: `Teorias conspiratórias sugerem que vacinas estão sendo usadas para implantar microchips em indivíduos,
-permitindo rastreamento em massa da população.`,
+    texto: `Teorias conspiratórias afirmam que vacinas estão sendo usadas para implantar microchips em pessoas, facilitando rastreamento em massa e violando a privacidade da população`,
   },
   {
     id: 6,
