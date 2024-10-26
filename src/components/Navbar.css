@@ -11,11 +11,6 @@
     z-index: 999; /* Garanta que não sobreponha conteúdos mais importantes */
 }
 
-.main-container {
-    margin-top: 60px; /* Compensa a altura da navbar */
-}
-
-
 /* Estilo do título */
 .navbar-title {
     color: white;
