@@ -1,18 +1,20 @@
-/* Navbar com posição fixa */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 60px; /* Altura consistente */
+    height: 60px;
     background-color: #785959e8;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Garanta que não sobreponha conteúdos mais importantes */
 }
+
+.main-container {
+    margin-top: 60px; /* Compensa a altura da navbar */
+}
+
 
 /* Estilo do título */
 .navbar-title {
