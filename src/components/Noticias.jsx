@@ -14,12 +14,12 @@ A campanha continuará durante o segundo semestre com a meta de manter os estoqu
   },
   {
     id: 2,
-    titulo: 'Ministério da Saúde anuncia aumento na vacinação contra a gripe',
+    titulo: 'Especialistas Afirmam que Água Engarrafada Está Contaminada com Substância Tóxica',
     texto: `Uma denúncia anônima revelou que grandes marcas de água mineral estariam comercializando produtos contaminados com uma substância tóxica que pode causar doenças neurológicas a longo prazo. Segundo fontes não confirmadas, amostras coletadas em diversas cidades apresentaram níveis de contaminação acima do permitido. A Agência Nacional de Vigilância Sanitária (Anvisa) estaria investigando o caso, mas ainda não se pronunciou oficialmente. Especialistas recomendam evitar o consumo de água engarrafada até que a situação seja esclarecida.`,
   },
   {
     id: 3,
-    titulo: 'Especialistas Afirmam que Água Engarrafada Está Contaminada com Substância Tóxica',
+    titulo: 'Ministério da Saúde anuncia aumento na vacinação contra a gripe',
     texto: `Ministério da Saúde anuncia aumento na vacinação contra a gripe
 
 O Ministério da Saúde anunciou nesta segunda-feira um aumento de 25% na cobertura vacinal contra a gripe em todo o país. De acordo com a ministra da Saúde, Dra. Maria Oliveira, a meta foi superada graças a campanhas intensivas de conscientização realizadas em todo o Brasil. “Estamos felizes em ver que a população está respondendo bem às iniciativas de vacinação. Isso é fundamental para reduzir a carga sobre o sistema de saúde, especialmente durante o inverno”, afirmou a ministra. O governo prevê que, até o final do ano, mais de 80% da população estará vacinada contra o vírus da gripe. Especialistas em saúde pública comemoram o avanço, destacando a importância da vacina para prevenir complicações respiratórias, principalmente em grupos de risco, como idosos e crianças. A campanha de vacinação segue até o final de setembro, com postos móveis e parcerias com clínicas particulares em várias cidades do país.`,
