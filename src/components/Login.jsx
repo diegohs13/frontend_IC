@@ -12,7 +12,7 @@ const Login = ({ setUserData }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('https://f706-2804-18-1053-4fe8-dd1a-627a-1dd0-3631.ngrok-free.app/login', {
+      await axios.post('https://5706-2804-18-1053-4fe8-dd1a-627a-1dd0-3631.ngrok-free.app/login', {
         nome_completo: nomeCompleto.trim(),
         telefone: telefone.trim(),
       });
